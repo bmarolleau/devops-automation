@@ -4,13 +4,13 @@ variable "ibmcloud_api_key" {
 
 variable "ibmcloud_region" {
     description = "Denotes which IBM Cloud region to connect to"
-    default     = "us-south"
+    default     = "eu-de"
 }
 
-#variable "ibmcloud_zone" {
-#    description = "Denotes the zone within the region to connect to (only needed for multi-zone regions--e.g., eu-de-1)"
-#    default     = "eu-de-1"
-#}
+variable "ibmcloud_zone" {
+    description = "Denotes the zone within the region to connect to (only needed for multi-zone regions--e.g., eu-de-1)"
+    default     = "eu-de-1"
+}
 
 variable "vm_name" {
     description = "Name of the VM"
@@ -28,12 +28,12 @@ variable "power_instance_id" {
 
 variable "memory" {
     description = "Amount of memory (GB) to be allocated to the VM"
-    default     = "4"
+    default     = "12"
 }
 
 variable "processors" {
     description = "Number of virtual processors to allocate to the VM"
-    default     = "1"
+    default     = "0,25"
 }
 
 variable "proc_type" {
@@ -67,7 +67,7 @@ variable "migratable" {
 
 variable "image_name" {
     description = "Name of the image from which the VM should be deployed"
-    default     = "7200-03-03"
+    default     = "IBMi-74-01-001"
 }
 
 variable "replication_policy" {
