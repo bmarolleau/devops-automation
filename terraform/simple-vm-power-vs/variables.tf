@@ -4,12 +4,12 @@ variable "ibmcloud_api_key" {
 
 variable "ibmcloud_region" {
     description = "Denotes which IBM Cloud region to connect to"
-    default     = "eu-de"
+    default     = "us-south"
 }
 
 variable "ibmcloud_zone" {
     description = "Denotes the zone within the region to connect to (only needed for multi-zone regions--e.g., eu-de-1)"
-    default     = "eu-de-1"
+    default     = "us-south"
 }
 
 variable "vm_name" {
@@ -24,6 +24,7 @@ variable "vm_private_key_base64" {
 
 variable "power_instance_id" {
     description = "Power Virtual Server instance ID associated with your IBM Cloud account (note that this is NOT the API key)"
+    default  =  "f0f71cbe-7997-4924-8321-7f876a494973"
 }
 
 variable "memory" {
@@ -33,7 +34,7 @@ variable "memory" {
 
 variable "processors" {
     description = "Number of virtual processors to allocate to the VM"
-    default     = "0,25"
+    default     = "1"
 }
 
 variable "proc_type" {
@@ -52,7 +53,7 @@ variable "shareable" {
 
 variable "networks" {
     description = "List of networks that should be attached to the VM"
-    default     = ["YOUR_NETWORK_NAME"]
+    default     = ["internal","public-192_168_130_56-29-VLAN_2067"]
 }
 
 variable "system_type" {
@@ -67,7 +68,7 @@ variable "migratable" {
 
 variable "image_name" {
     description = "Name of the image from which the VM should be deployed"
-    default     = "IBMi-74-01-001"
+    default     = "IBMi74-MOP"
 }
 
 variable "replication_policy" {
