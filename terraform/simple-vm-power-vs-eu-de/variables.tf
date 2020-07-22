@@ -1,6 +1,6 @@
 variable "ibmcloud_api_key" {
     description = "Denotes the IBM Cloud API key to use"
-    default="QdRGJQk6u9HerlPhC82ozmBdbju6qDC3aUY6MJZE3X0w" 
+ 
 }
 
 variable "ibmcloud_region" {
